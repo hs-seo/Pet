@@ -1,4 +1,12 @@
 Pet::Application.routes.draw do
+  root 'treatments#posts'
+  get "treatments/posts_category"
+  get "treatments/show"
+  get "treatments/write"
+  get "treatments/write_complete"
+  get "treatments/edit"
+  get "treatments/edit_complete"
+  get "treatments/delete_complete"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
