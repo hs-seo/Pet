@@ -4,6 +4,17 @@ class TreatmentsController < ApplicationController
   end
 
   def posts_category
+		case params[:category]
+		when "vaccination"
+			@category = "예방접종"
+		when "neutering"
+			@category = "중성화"
+		when "grooming"
+			@category = "미용"
+		else
+			@category = "일반진료"
+		end
+		@posts = Post.where(category: @category)
   end
 
   def show
