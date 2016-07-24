@@ -3,7 +3,7 @@ Pet::Application.routes.draw do
   get "/:category" => 'treatments#posts_category'
   get "treatments/show/:id" => 'treatments#show'
   get "treatments/write"
-  get "treatments/write_complete"
+  post "treatments/write_complete"
   get "treatments/edit"
   get "treatments/edit_complete"
   get "treatments/delete_complete"
