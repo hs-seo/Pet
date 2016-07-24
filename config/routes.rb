@@ -6,7 +6,7 @@ Pet::Application.routes.draw do
   post "treatments/write_complete"
   get "treatments/edit/:id" => 'treatments#edit'
   post "treatments/edit_complete"
-  get "treatments/delete_complete"
+  get "treatments/delete_complete/:id" => 'treatments#delete_complete'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
