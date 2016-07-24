@@ -2,7 +2,7 @@ Pet::Application.routes.draw do
   get "users/signup"
   post "users/signup_complete"
   get "users/login"
-  get "users/login_complete"
+  post "users/login_complete"
   get "users/logout_complete"
   root 'treatments#posts'
   get "/:category" => 'treatments#posts_category'
