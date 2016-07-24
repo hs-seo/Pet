@@ -1,7 +1,7 @@
 Pet::Application.routes.draw do
   root 'treatments#posts'
-  get "/:category" => "treatments#posts_category"
-  get "treatments/show"
+  get "/:category" => 'treatments#posts_category'
+  get "treatments/show/:id" => 'treatments#show'
   get "treatments/write"
   get "treatments/write_complete"
   get "treatments/edit"
