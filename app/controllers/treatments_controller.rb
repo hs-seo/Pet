@@ -22,7 +22,7 @@ class TreatmentsController < ApplicationController
 
   def show
 		@post = Post.find(params[:id])
-		@comment_writer =User.where(id: session[:user_id])[0]
+		@comment_writer = User.where(id: session[:user_id])[0]
   end
 
   def write
@@ -34,6 +34,7 @@ class TreatmentsController < ApplicationController
     post.category = params[:post_category]
     post.title = params[:post_title]
     post.content = params[:post_content]
+		post.image = params[:image]
     if post.save
       flash[:alert] = "저장되었습니다."
       redirect_to "/treatments/show/#{post.id}"
